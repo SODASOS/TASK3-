@@ -1,1 +1,29 @@
 
+#include <iostream>
+#include <numeric> // Для accumulate
+
+using namespace std;
+
+int main() {
+    int time1, time2, time3;
+    int totalTime = 0;
+    int count = 0;
+
+
+    cout << "Введите время обработки для каждой детали на трех станках:" << endl;
+
+     while (cin >> time1 >> time2 >> time3, time1 >=0 && time2 >= 0 && time3 >=0 ) {
+        totalTime += time1 + time2 + time3;
+        count++;
+
+    }
+
+    if(count > 0){
+       cout << "Общее время обработки всех деталей: " << totalTime << " единиц времени" << endl;
+    } else {
+        cout << "Не было введено никаких деталей" << endl;
+    }
+
+
+    return 0;
+}
